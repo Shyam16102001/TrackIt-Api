@@ -30,6 +30,7 @@ class TransactionController extends Controller
             'amount' => 'required|numeric',
             'type' => 'required|string',
             'name' => 'required|string',
+            'date' => 'required|date'
         ]);
 
         $transaction = Transaction::create([
@@ -39,6 +40,7 @@ class TransactionController extends Controller
             'amount' => $data['amount'],
             'type' => $data['type'],
             'name' => $data['name'],
+            'date' => $data['date']
         ]);
 
         return $this->apiResponse($transaction, 200);

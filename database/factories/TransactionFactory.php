@@ -19,6 +19,7 @@ class TransactionFactory extends Factory
     {
         return [
             'user_id' => User::all()->random()->id,
+            'date' => $this->faker->date(),
             'group_id' => null,
             'category_id' => null,
             'amount' => $this->faker->numberBetween(1, 1000),

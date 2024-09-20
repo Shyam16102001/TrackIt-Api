@@ -15,6 +15,7 @@ return new class extends Migration {
             $table->foreignUuid('user_id');
             $table->foreignUuid('group_id')->nullable();
             $table->foreignUuid('category_id')->nullable();
+            $table->date('date');
             $table->string('name');
             $table->decimal('amount', 8, 2);
             $table->string('type');
