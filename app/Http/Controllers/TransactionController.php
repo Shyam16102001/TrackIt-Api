@@ -203,6 +203,7 @@ class TransactionController extends Controller
             'monthly_totals' => $monthlyTotals,
             'category_totals_current_month' => $categoryChangeAnalysis,
             'last_10_transactions' => $last10Transactions,
+            'transactions_count' => $currentMonthTransactions->count(),
         ], 200);
     }
 }
