@@ -137,13 +137,9 @@ class TransactionController extends Controller
             $investment = $totalsByType->get('investment', 0);
             $savings = $totalsByType->get('savings', 0);
 
-            // Calculate total for the month
-            $total = $income + $expense + $investment + $savings;
-
             // Add to the monthly totals array
             $monthlyTotals[] = [
                 'name' => $monthStart->format('M'),
-                'total' => $total,
                 'income' => $income,
                 'expense' => $expense,
                 'investment' => $investment,
